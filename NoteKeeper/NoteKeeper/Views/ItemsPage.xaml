@@ -7,6 +7,10 @@
              xmlns:model="clr-namespace:NoteKeeper.Models"  
              x:Name="BrowseItemsPage">
 
+    <!--
+        Allows adding the toolbar with its items.
+        Here the command parameter referes to an object in the ItemViewModel which handles interactions among other things
+    -->
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Command="{Binding AddItemCommand}" />
     </ContentPage.ToolbarItems>

@@ -4,6 +4,14 @@
              xmlns:system="clr-namespace:System;assembly=netstandard"
              x:Class="NoteKeeper.Views.ItemDetailPage"
              Title="{Binding Title}">
+
+    <!--
+        ContentPage.ToolbarItems can be used in any ContentPage to manage the toolbar
+    -->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancel" Clicked="CancelMenuItem_OnClicked"/>
+        <ToolbarItem Text="Save" Clicked="SaveMenuItem_OnClicked"/>
+    </ContentPage.ToolbarItems>
  
     <StackLayout Spacing="20" Padding="15">
         <Picker x:Name="NoteCourse" Title="Note course" FontSize="Medium">
@@ -18,7 +26,7 @@
 
         <Entry x:Name="NoteHeading" Placeholder="Note heading" FontSize="Medium" />
 
-        <Editor x:Name="NoteText" Placeholder="Note" FontSize="Medium"></Editor>
+        <Editor x:Name="NoteText" Placeholder="Note" AutoSize="TextChanges" FontSize="Medium"></Editor>
     </StackLayout>
     
 </ContentPage>
